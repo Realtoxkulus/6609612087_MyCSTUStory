@@ -18,22 +18,53 @@ body{
 }
 
 section.about{
-    padding: 50px 150px;
-}
-
-.about h2{
-    text-align: center;
-    color: #eab308;
-    font-size: 30px;
-    font-weight: 600;
-}
-
-.underline{
-    height: 3px;
-    width: 80px;
-    background-color: #eab308;
-    margin: auto;
+    padding: 0px 150px;
     margin-bottom: 50px;
+}
+
+.nav-bar{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 150px;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a{
+    font-size: 20px;
+    color: #eab308;
+    transition: all 0.3s ease;
+}
+
+.nav-links a{
+    position: relative;
+}
+  
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fdf98b;
+    transform-origin: center;
+    transform: translate(-50%, 0) scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+    transform: translate(-50%, 0) scaleX(1);
+}
+
+.logo{
+    color: #fff;
 }
 
 .about-content{
