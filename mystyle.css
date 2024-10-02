@@ -10,6 +10,8 @@
     --h3-size: 30px;
     --h4-size: 16px;
     --p-size: 18px;
+    --h1-size : 24px;
+    --nav-link: 20px;
 }
 
 body{
@@ -37,13 +39,14 @@ section.about{
 }
 
 .nav-links a{
-    font-size: 20px;
+    font-size: var(--nav-link);
     color: #eab308;
     transition: all 0.3s ease;
+    position: relative;
 }
 
-.nav-links a{
-    position: relative;
+.nav-links a:hover{
+    color: #fdf98b;
 }
   
 .nav-links a::before {
@@ -65,6 +68,7 @@ section.about{
 
 .logo{
     color: #fff;
+    font-size: var(--h1-size);
 }
 
 .about-content{
@@ -76,6 +80,7 @@ section.about{
 
 .about-content img{
     width: 500px;
+    height: auto;
 }
 
 .about-text h3{
@@ -187,6 +192,10 @@ video{
         width: 400px;
     }
 
+    .nav-bar{
+        padding: 80px 100px 0px 100px;
+    }
+
     section.about, .video{
         padding: 50px 100px;
     }
@@ -199,11 +208,16 @@ video{
         --p-size: 16px;
     }
 
+    .nav-bar{
+        padding: 80px 150px 0px 150px;
+    }
+
     .about-content{
         flex-direction: column;
     }
     section.about, .video{
         padding: 50px 150px;
+        margin-bottom: 0;
     }
 
     .about-content img{
@@ -220,8 +234,16 @@ video{
 }
 
 @media screen and (max-width: 900px){
+    :root{
+        --h1-size: 18px;
+    }
+
     section.about, .video{
         padding: 50px 100px;
+    }
+
+    .nav-bar{
+        padding: 80px 100px 0px 100px;
     }
 
     video{
@@ -229,11 +251,31 @@ video{
     }
 }
 
+@media screen and (max-width: 700px){
+    :root{
+        --h3-size: 30px;
+        --h4-size: 14px;
+        --p-size: 14px;
+        --h1-size: 16px;
+        --nav-link: 16px;
+    }
+
+    .nav-links{
+        gap: 20px;
+    }
+    
+}
+
 @media screen and (max-width: 602px){
     :root{
         --h3-size: 30px;
         --h4-size: 14px;
         --p-size: 14px;
+        --h1-size: 16px;
+    }
+
+    .nav-bar{
+        padding: 50px 70px 0px 70px;
     }
 
     section.about, .video{
@@ -256,7 +298,4 @@ video{
         font-size: 14px;
         padding: 5px 20px;
     }
-    /* li:last-child{
-        display: none;
-    } */
 }
