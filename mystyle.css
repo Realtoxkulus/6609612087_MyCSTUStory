@@ -7,10 +7,10 @@
 }
 
 :root{
+    --h1-size : 24px;
     --h3-size: 30px;
     --h4-size: 16px;
     --p-size: 18px;
-    --h1-size : 24px;
     --nav-link: 20px;
 }
 
@@ -215,14 +215,14 @@ video{
     }
 
     .nav-bar{
-        padding: 80px 150px 0px 150px;
+        padding: 80px 100px 0px 100px;
     }
 
     .about-content{
         flex-direction: column;
     }
     section.about, .video{
-        padding: 50px 150px;
+        padding: 50px 100px;
         margin-bottom: 0;
     }
 
@@ -303,5 +303,100 @@ video{
     button{
         font-size: 14px;
         padding: 5px 20px;
+    }
+}
+
+
+.myplan{
+    margin: 0 150px;
+    background-color: #1b2541;
+    padding: 50px;
+}
+
+.myplan h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: #eab308;
+    font-size: 30px;
+}
+
+.myplan > .underline{
+    height: 3px;
+    width: 80px;
+    background-color: #eab308;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.myplan-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.myplan-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2f3c65;
+    padding: 30px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.myplan-card h4{
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(12, 27, 75, 0.5);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 30px;
+    border: 1px solid #81a6d9;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.card-icon i{
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #0f172a;
+    background-color: #81a6d9;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-icon i:hover{
+    color: #eab308;
+    background-color: #1b2541;
+    border: 1px solid #fff;
+}
+
+.myplan-card p{
+    color: #fff;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1200px){
+    .myplan{
+        margin: 50px 100px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .myplan-content{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .myplan{
+        margin: 50px 70px;
+    }
+
+    .myplan h2{
+        font-size: 25px;
     }
 }
